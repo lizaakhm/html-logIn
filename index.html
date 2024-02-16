@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>log in</title>
+</head>
+<body class=" min-h-screen bg-black w-full flex justify-center items-center">
+<div class="bg-[#18181b] w-full max-w-xl mx-4 md:mx-auto p-12 rounded-lg">
+    <div class="flex bg-white rounded-lg">
+        <button onclick="window.location.href='{{route('registration-view')}}'"
+            class="flex-grow flex items-center justify-center text-white bg-[#91c6ea] focus:outline-none font-medium rounded-lg text-sm w-full">ავტორიზაცია</button>
+        <button onclick="window.location.href='{{route('login')}}'"
+            class="flex-grow  flex items-center  justify-center w-auto px-4 py-2 text-center text-20 rounded-lg border-[2px] border-white text-[#91c6ea] bg-white focus:outline-none font-medium rounded-lg text-sm w-full px-5 py-2.5 pr-0 pl-0">რეგისტრაცია</button>
+    </div>
+    <form id="loginForm" method="post" action="{{ route('login') }}">
+        <div class="mb-6" id="firstForm">
+            <div class="mb-6 ">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 text-white mt-6">ელ.ფოსტა</label>
+                <input type="email" name="email"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    required />
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block mb-2 text-sm font-medium text-gray-900 text-white">პაროლი</label>
+                <input type="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+            </div>
+            <button type="submit" class="text-white bg-[#91c6ea] mt-[30px] focus:outline-none font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center">შესვლა</button>
+        </form>
+        
+</div>
+</body>
+</html>
